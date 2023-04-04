@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Chatelain.Ian.Business</name>
+    </assembly>
+    <members>
+        <member name="T:Chatelain.Ian.Business.Accessories">
+            <summary>
+            The accessories included in the vehicle.
+            </summary>
+        </member>
+        <member name="F:Chatelain.Ian.Business.Accessories.StereoSystem">
+            <summary>
+            The stereo system accessory.
+            </summary>
+        </member>
+        <member name="F:Chatelain.Ian.Business.Accessories.LeatherInterior">
+            <summary>
+            The leather interior accessory.
+            </summary>
+        </member>
+        <member name="F:Chatelain.Ian.Business.Accessories.StereoAndLeather">
+            <summary>
+            The stereo system and leather interior accessories.
+            </summary>
+        </member>
+        <member name="F:Chatelain.Ian.Business.Accessories.ComputerNavigation">
+            <summary>
+            The computer navigation accessory.
+            </summary>
+        </member>
+        <member name="F:Chatelain.Ian.Business.Accessories.StereoAndNavigation">
+            <summary>
+            The stereo system and computer navigation accessories.
+            </summary>
+        </member>
+        <member name="F:Chatelain.Ian.Business.Accessories.LeatherAndNavigation">
+            <summary>
+            The leather interior and computer navigation accessories.
+            </summary>
+        </member>
+        <member name="F:Chatelain.Ian.Business.Accessories.All">
+            <summary>
+            All the accessories.
+            </summary>
+        </member>
+        <member name="F:Chatelain.Ian.Business.Accessories.None">
+            <summary>
+            None of the accessories.
+            </summary>
+        </member>
+        <member name="T:Chatelain.Ian.Business.CarWashInvoice">
+            <summary>
+            Represents an invoice for a car wash.
+            </summary>
+        </member>
+        <member name="E:Chatelain.Ian.Business.CarWashInvoice.PackageCostChanged">
+            <summary>
+            Occurs when the package cost changes.
+            </summary>
+        </member>
+        <member name="E:Chatelain.Ian.Business.CarWashInvoice.FragranceCostChanged">
+            <summary>
+            Occurs when the fragrance cost changes.
+            </summary>
+        </member>
+        <member name="P:Chatelain.Ian.Business.CarWashInvoice.PackageCost">
+            <summary>
+            Gets and sets the amount charged for the chosen package.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the value is less than zero.</exception>
+        </member>
+        <member name="P:Chatelain.Ian.Business.CarWashInvoice.FragranceCost">
+            <summary>
+            Gets and sets the amount charged for the chosen fragrance.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the value is less than zero.</exception>
+        </member>
+        <member name="P:Chatelain.Ian.Business.CarWashInvoice.ProvincialSalesTaxCharged">
+            <summary>
+            Gets the amount of provincial sales tax charged to the customer. 
+            </summary>
+        </member>
+        <member name="P:Chatelain.Ian.Business.CarWashInvoice.GoodsAndServicesTaxCharged">
+            <summary>
+            Gets the amount of goods and services tax charged to the customer.
+            </summary>
+        </member>
+        <member name="P:Chatelain.Ian.Business.CarWashInvoice.SubTotal">
+            <summary>
+            Gets the subtotal of the Invoice. The subtotal is the sum of the package and fragrance cost.
+            </summary>
+        </member>
+        <member name="M:Chatelain.Ian.Business.CarWashInvoice.#ctor(System.Decimal,System.Decimal)">
+            <summary>
+            Initializes an instance of CarWashInvoice with a provincial and goods and services tax rates. The package cost and fragrance cost are zero.
+            </summary>
+            <param name="provincialSalesTaxRate">The rate of provincial tax charged to a customer.</param>
+            <param name="goodsAndServicesTaxRate">The rate of goods and services tax charged to a customer.</param>
+        </member>
+        <member name="M:Chatelain.Ian.Business.CarWashInvoice.#ctor(System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+            <summary>
+            Initializes an instance of CarWashInvoice with a provincial and goods, services tax rate, package cost and fragrance cost.
+            </summary>
+            <param name="provincialSalesTaxRate">The rate of provincial tax charged to a customer.</param>
+            <param name="goodsAndServicesTaxRate">The rate of goods and services tax charged to a customer.</param>
+            <param name="packageCost">The cost of the chosen package.</param>
+            <param name="fragranceCost">The cost of the chosen fragrance.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the package cost is less than zero.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the fragrance cost is less than zero.</exception>
+        </member>
+        <member name="M:Chatelain.Ian.Business.CarWashInvoice.OnPackageCostChanged">
+            <summary>
+            Raises the PackageCostChanged event.
+            </summary>
+        </member>
+        <member name="M:Chatelain.Ian.Business.CarWashInvoice.OnFragranceCostChanged">
+            <summary>
+            Raises the FragranceCostChanged event.
+            </summary>
+        </member>
+        <member name="T:Chatelain.Ian.Business.Financial">
+            <summary>
+            Represents the financial information of an invoice.
+            </summary>
+        </member>
+        <member name="M:Chatelain.Ian.Business.Financial.GetPayment(System.Decimal,System.Int32,System.Decimal)">
+            <summary>
+            Returns the payment amount for an annuity based on periodic, fixed payments and a fixed interest rate.
+            </summary>
+            <param name="rate">The interest rate per period.</param>
+            <param name="numberOfPaymentPeriods">The total number of payment periods in the annuity.</param>
+            <param name="presentValue">The present value (or lump sum) that a series of payments to be paid in the future is worth now.</param>
+            <returns>The payment amount for an annuity.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the rate is less than zero or greater than one..</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the number of payment periods is less than or equal to zero.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the present value is less than or equal to zero.</exception>
+        </member>
+        <member name="T:Chatelain.Ian.Business.Invoice">
+            <summary>
+            Represents an invoice for the sale of a vehicle.
+            </summary>
+        </member>
+        <member name="E:Chatelain.Ian.Business.Invoice.ProvincialSalesTaxRateChanged">
+            <summary>
+            Occurs when the provincial sales tax rate of the Invoice changes.
+            </summary>
+        </member>
+        <member name="E:Chatelain.Ian.Business.Invoice.GoodsAndServicesTaxRateChanged">
+            <summary>
+            Occurs when the goods and services tax rate of the Invoice changes.
+            </summary>
+        </member>
+        <member name="P:Chatelain.Ian.Business.Invoice.ProvincialSalesTaxRate">
+            <summary>
+            Gets and sets the goods and services tax rate.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the value is less than zero or greater than one.</exception>
+        </member>
+        <member name="P:Chatelain.Ian.Business.Invoice.GoodsAndServicesTaxRate">
+            <summary>
+            Gets and sets the goods and services tax rate.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the value is less than zero or greater than one.</exception>
+        </member>
+        <member name="P:Chatelain.Ian.Business.Invoice.ProvincialSalesTaxCharged">
+            <summary>
+            Gets the amount of provincial sales tax charged to the customer.
+            </summary>
+        </member>
+        <member name="P:Chatelain.Ian.Business.Invoice.GoodsAndServicesTaxCharged">
+            <summary>
+            Gets the amount of goods and services tax charged to the customer .
+            </summary>
+        </member>
+        <member name="P:Chatelain.Ian.Business.Invoice.SubTotal">
+            <summary>
+            Gets the subtotal of the Invoice.
+            </summary>
+        </member>
+        <member name="P:Chatelain.Ian.Business.Invoice.Total">
+            <summary>
+            Gets the sum of the subtotal and taxes of the Invoice.
+            </summary>
+        </member>
+        <member name="M:Chatelain.Ian.Business.Invoice.#ctor(System.Decimal,System.Decimal)">
+            <summary>
+            Initializes an instance of Invoice with a provincial and goods and services tax rates.
+            </summary>
+            <param name="provincialSalesTaxRate">The rate of provincial tax charged to a customer.</param>
+            <param name="goodsAndServicesTaxRate">The rate of goods and services tax charged to a customer.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the provincial sales tax rate is less than zero or greater than 1.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the goods and services tax rate is less than zero or greater than 1.</exception>
+        </member>
+        <member name="M:Chatelain.Ian.Business.Invoice.OnProvincialSalesTaxRateChanged">
+            <summary>
+            Raises the ProvincialSalesTaxRateChanged event.
+            </summary>
+        </member>
+        <member name="M:Chatelain.Ian.Business.Invoice.OnGoodsAndServicesTaxRateChanged">
+            <summary>
+            Raises the GoodsAndServicesTaxRateChanged event.
+            </summary>
+        </member>
+        <member name="T:Chatelain.Ian.Business.SalesQuote">
+            <summary>
+            Represents a sales quote of a vehicle.
+            </summary>
+        </member>
+        <member name="E:Chatelain.Ian.Business.SalesQuote.VehiclePriceChanged">
+            <summary>
+            Occurs when the price of the vehicle being quoted on changes.
+            </summary>
+        </member>
+        <member name="E:Chatelain.Ian.Business.SalesQuote.TradeInAmountChanged">
+            <summary>
+            Occurs when the amount for the trade in vehicle changes.
+            </summary>
+        </member>
+        <member name="E:Chatelain.Ian.Business.SalesQuote.AccessoriesChosenChanged">
+            <summary>
+            Occurs when the chosen accessories change.
+            </summary>
+        </member>
+        <member name="E:Chatelain.Ian.Business.SalesQuote.ExteriorFinishChosenChanged">
+            <summary>
+            Occurs when the chosen exterior finish changes.
+            </summary>
+        </member>
+        <member name="P:Chatelain.Ian.Business.SalesQuote.VehicleSalePrice">
+            <summary>
+            Gets and sets the sale price of the vehicle.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the property is set to less than or equal to 0.</exception>
+        </member>
+        <member name="P:Chatelain.Ian.Business.SalesQuote.TradeInAmount">
+            <summary>
+            Gets and sets the trade in amount.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the property is set to less than 0.</exception>
+        </member>
+        <member name="P:Chatelain.Ian.Business.SalesQuote.AccessoriesChosen">
+            <summary>
+            Gets and sets the accessories that were chosen.
+            </summary>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Thrown when the property is set to an invalid value.</exception>
+        </member>
+        <member name="P:Chatelain.Ian.Business.SalesQuote.ExteriorFinishChosen">
+            <summary>
+            Gets and sets the exterior finish that was chosen.
+            </summary>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Thrown when the property is set to an invalid value.</exception>
+        </member>
+        <member name="P:Chatelain.Ian.Business.SalesQuote.AccessoryCost">
+            <summary>
+            Gets the cost of accessories chosen.
+            </summary>
+        </member>
+        <member name="P:Chatelain.Ian.Business.SalesQuote.FinishCost">
+            <summary>
+            Gets the cost of the exterior finish chosen.
+            </summary>
+        </member>
+        <member name="P:Chatelain.Ian.Business.SalesQuote.TotalOptions">
+            <summary>
+            Gets the sum of the cost of the chosen accessories and exterior finish.
+            </summary>
+        </member>
+        <member name="P:Chatelain.Ian.Business.SalesQuote.SubTotal">
+            <summary>
+            Gets the sum of the vehicle’s sale price and the Accessory and Finish Cost.
+            </summary>
+        </member>
+        <member name="P:Chatelain.Ian.Business.SalesQuote.SalesTax">
+            <summary>
+            Gets the amount of tax to charge based on the subtotal.
+            </summary>
+        </member>
+        <member name="P:Chatelain.Ian.Business.SalesQuote.Total">
+            <summary>
+            Gets the sum of the subtotal and taxes.
+            </summary>
+        </member>
+        <member name="P:Chatelain.Ian.Business.SalesQuote.AmountDue">
+            <summary>
+            Gets the result of subtracting the trade-in amount from the total.
+            </summary>
+        </member>
+        <member name="M:Chatelain.Ian.Business.SalesQuote.#ctor(System.Decimal,System.Decimal,System.Decimal,Chatelain.Ian.Business.Accessories,Chatelain.Ian.Business.ExteriorFinish)">
+            <summary>
+            Initializes an instance of SalesQuote with specified vehicle sale price, trade in amount, sales tax rate, accessories chose, and exterior finish chosen.
+            </summary>
+            <param name="vehicleSalePrice">The sale price of the vehicle.</param>
+            <param name="tradeInAmount">The trade in amount of the vehicle.</param>
+            <param name="salesTaxRate">The sales tax rate.</param>
+            <param name="accessoriesChosen">The accessory chosen for the vehicle.</param>
+            <param name="exteriorFinishChosen">The exterior finish chosen for the vehicle.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the vehicle sale price is less than or equal to zero.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the trade in amount is less than zero.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the sales tax rate is less than zero or greater than one.</exception>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">Thrown when the value is an invalid enumeration value.</exception>
+        </member>
+        <member name="M:Chatelain.Ian.Business.SalesQuote.#ctor(System.Decimal,System.Decimal,System.Decimal)">
+            <summary>
+            Initializes an instance of SalesQuote with specified vehicle sale price, trade in amount and sales tax rate.
+            </summary>
+            <param name="vehicleSalePrice">The sale price of the vehicle.</param>
+            <param name="tradeInAmount">The trade in amount of the vehicle.</param>
+            <param name="salesTaxRate">The sales tax rate.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the vehicle sale price is less than or equal to zero.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the trade in amount is less than zero.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the sales tax rate is less than zero.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the sales tax rate is greater than one.</exception>
+        </member>
+        <member name="M:Chatelain.Ian.Business.SalesQuote.OnVehiclePriceChanged">
+            <summary>
+            Raises the VehiclePriceChanged event.
+            </summary>
+        </member>
+        <member name="M:Chatelain.Ian.Business.SalesQuote.OnTradeInAmountChanged">
+            <summary>
+            Raises the TradeInAmountChanged event.
+            </summary>
+        </member>
+        <member name="M:Chatelain.Ian.Business.SalesQuote.OnAccessoriesChosenChanged">
+            <summary>
+            Raises the AccessoriesChosenChanged event.
+            </summary>
+        </member>
+        <member name="M:Chatelain.Ian.Business.SalesQuote.OnExteriorFinishChosenChanged">
+            <summary>
+            Raises the ExteriorFinishChosenChanged event.
+            </summary>
+        </member>
+        <member name="T:Chatelain.Ian.Business.ExteriorFinish">
+            <summary>
+            The Finish of the vehicle.
+            </summary>
+        </member>
+        <member name="F:Chatelain.Ian.Business.ExteriorFinish.Standard">
+            <summary>
+            The standard exterior finish.
+            </summary>
+        </member>
+        <member name="F:Chatelain.Ian.Business.ExteriorFinish.Pearlized">
+            <summary>
+            The pearlized exterior finish.
+            </summary>
+        </member>
+        <member name="F:Chatelain.Ian.Business.ExteriorFinish.Custom">
+            <summary>
+            The custom exterior finish.
+            </summary>
+        </member>
+        <member name="F:Chatelain.Ian.Business.ExteriorFinish.None">
+            <summary>
+            None of the exterior finishes.
+            </summary>
+        </member>
+    </members>
+</doc>

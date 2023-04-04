@@ -1,0 +1,54 @@
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.RRCAGApp.exe.config
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.RRCAGApp.exe
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.RRCAGApp.pdb
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\ACE.BIT.ADEV.dll
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.Business.dll
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\ACE.BIT.ADEV.xml
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.Business.xml
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.AssemblyReference.cache
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.MainForm.resources
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.Properties.Resources.resources
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.GenerateResource.cache
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.CoreCompileInputs.cache
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.CopyComplete
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.exe
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.pdb
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.AboutForm.resources
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 5\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.SalesQuoteForm.resources
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.AssemblyReference.cache
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.AboutForm.resources
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.MainForm.resources
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.Properties.Resources.resources
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.SalesQuoteForm.resources
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.GenerateResource.cache
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.CoreCompileInputs.cache
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.exe
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.pdb
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.RRCAGApp.exe.config
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.RRCAGApp.exe
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.RRCAGApp.pdb
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\ACE.BIT.ADEV.xml
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.Business.xml
+C:\Users\arkli\Desktop\Assignment 5\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.CopyComplete
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.RRCAGApp.exe.config
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.RRCAGApp.exe
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.RRCAGApp.pdb
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\ACE.BIT.ADEV.dll
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.Business.dll
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\ACE.BIT.ADEV.xml
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.Business.xml
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.AssemblyReference.cache
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.AboutForm.resources
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.MainForm.resources
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.Properties.Resources.resources
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.SalesQuoteForm.resources
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.GenerateResource.cache
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.CoreCompileInputs.cache
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.CopyComplete
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.exe
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.pdb
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.CarWashForm.resources
+C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.CarWashInvoiceForm.resources
