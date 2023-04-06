@@ -29,8 +29,10 @@ namespace Chatelain.Ian.RRCAGApp
     {
         BindingSource packageSource;
         BindingSource fragranceSource;
+        BindingSource interiorSource;
         BindingList<Package> packageBinding;
         BindingList<CarWashItem> fragranceBinding;
+        BindingList<string> interiorBinding;
         CarWashInvoiceForm carWashInvoiceForm;
         CarWashInvoice carWashInvoice;
 
@@ -43,6 +45,8 @@ namespace Chatelain.Ian.RRCAGApp
             this.fragranceSource = new BindingSource();
             this.packageBinding = new BindingList<Package>();
             this.fragranceBinding = new BindingList<CarWashItem>();
+            this.interiorSource = new BindingSource();
+            this.interiorBinding = new BindingList<string>();
 
             CreateCarWashItems();
             CreatePackages();
@@ -52,9 +56,14 @@ namespace Chatelain.Ian.RRCAGApp
             this.fragranceSource.DataSource = this.fragranceBinding;
             this.cboFragrance.DataSource = this.fragranceSource;
 
+            this.interiorSource.DataSource = this.interiorBinding;
+            this.lstInterior.DataSource = this.interiorSource;
+
+
             this.Load += CarWashForm_Load;
             this.mnuToolsGenerateInvoice.Click += MnuToolsGenerateInvoice_Click;
             this.mnuFileClose.Click += MnuFileClose_Click;
+            // TODO: make handlers specific to the controls 
             this.cboPackage.SelectedIndexChanged += SelectionChanged;
             this.cboFragrance.SelectedIndexChanged += SelectionChanged;
         }
@@ -102,16 +111,21 @@ namespace Chatelain.Ian.RRCAGApp
         {
             if (this.cboPackage.SelectedIndex != -1)
             {
+                // take this from event instead of selected item of cbopackage.
                 this.carWashInvoice = new CarWashInvoice(0.07M, 0.05M, ((Package)this.cboPackage.SelectedItem).Price, ((CarWashItem)this.cboFragrance.SelectedItem).Price);
-                string currentFragrance = ((CarWashItem)this.cboFragrance.SelectedItem).Description;
-                List<string> currentServices = ((Package)this.cboPackage.SelectedItem).InteriorServices;
-
-                currentServices.Insert(0, string.Format("Fragrance - {0}", currentFragrance));
 
                 ClearLabels();
+                ComboBox comboBox = (ComboBox)sender;
 
-                this.lstInterior.DataSource = currentServices;
-                this.lstExterior.DataSource = ((Package)this.cboPackage.SelectedItem).ExteriorServices;
+                Package package = (Package)comboBox.SelectedItem;
+                List<string> carWashItem = package.InteriorServices;
+
+                // Find a data structure so I can get descriptoin and change whats there instead of clearing.
+                // selection will send the current object here where I can access the property for it's value.
+                this.interiorSource.Clear();
+                // loop through list of strings in carwashitem and add each one to interior source.
+                this.interiorSource.Add(carWashItem.ToString());
+                
                 this.lblGoodsAndServicesTax.DataBindings.Add("Text", carWashInvoice, "GoodsAndServicesTaxCharged");
                 this.lblProvincialSalesTax.DataBindings.Add("Text", carWashInvoice, "ProvincialSalesTaxCharged");
                 this.lblSubtotal.DataBindings.Add("Text", carWashInvoice, "SubTotal", true, DataSourceUpdateMode.Never, null, "C");
@@ -135,12 +149,6 @@ namespace Chatelain.Ian.RRCAGApp
             // Combo Boxes
             this.cboPackage.SelectedIndex = -1;
             this.cboFragrance.SelectedIndex = this.cboFragrance.FindStringExact("Pine");
-
-            // DataSources
-            this.lstInterior.DataSource = null;
-            this.lstExterior.DataSource = null;
-            this.lstInterior.SelectionMode = SelectionMode.One;
-            this.lstExterior.SelectionMode = SelectionMode.One;
         }
 
         /// <summary>

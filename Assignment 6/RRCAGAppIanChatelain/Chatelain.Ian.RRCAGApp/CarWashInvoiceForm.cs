@@ -38,19 +38,5 @@ namespace Chatelain.Ian.RRCAGApp
             this.lblGoodsAndServicesTax.Text = string.Format("{0:N}", CarWashInvoice.GoodsAndServicesTaxCharged);
             this.Text = "Car Wash Invoice";
         }
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // CarWashInvoiceForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(619, 393);
-            this.Name = "CarWashInvoiceForm";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
-        }
     }
 }
