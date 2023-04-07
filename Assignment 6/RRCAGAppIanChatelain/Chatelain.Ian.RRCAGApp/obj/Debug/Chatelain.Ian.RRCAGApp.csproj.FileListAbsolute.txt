@@ -52,3 +52,23 @@ C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\A
 C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.pdb
 C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.CarWashForm.resources
 C:\Users\arkli\OneDrive - Red River College Polytech\Class Files\ADEV\Module 6\Assignment\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.CarWashInvoiceForm.resources
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.RRCAGApp.exe.config
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.RRCAGApp.exe
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.RRCAGApp.pdb
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\ACE.BIT.ADEV.dll
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.Business.dll
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\ACE.BIT.ADEV.xml
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\bin\Debug\Chatelain.Ian.Business.xml
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.AssemblyReference.cache
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.SuggestedBindingRedirects.cache
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.AboutForm.resources
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.CarWashForm.resources
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.CarWashInvoiceForm.resources
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.MainForm.resources
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.Properties.Resources.resources
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.SalesQuoteForm.resources
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.GenerateResource.cache
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.CoreCompileInputs.cache
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.csproj.CopyComplete
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.exe
+D:\RRC\Repos\Assignment 6\RRCAGAppIanChatelain\Chatelain.Ian.RRCAGApp\obj\Debug\Chatelain.Ian.RRCAGApp.pdb

@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ACE.BIT.ADEV.Forms;
 using Chatelain.Ian.Business;
 
@@ -30,27 +31,13 @@ namespace Chatelain.Ian.RRCAGApp
         {
             CarWashInvoice = carWashInvoice;
 
-            this.lblTotal.Text = string.Format("{0:C}", CarWashInvoice.Total);
-            this.lblSubtotal.Text = string.Format("{0:C}", CarWashInvoice.SubTotal);
+            this.lblGoodsAndServicesTax.DataBindings.Add("Text", carWashInvoice, "GoodsAndServicesTaxCharged");
+            this.lblProvincialSalesTax.DataBindings.Add("Text", carWashInvoice, "ProvincialSalesTaxCharged");
+            this.lblSubtotal.DataBindings.Add("Text", carWashInvoice, "SubTotal", true, DataSourceUpdateMode.Never, null, "C");
+            this.lblTotal.DataBindings.Add("Text", carWashInvoice, "Total", true, DataSourceUpdateMode.Never, null, "C");
             this.lblFragrancePrice.Text = string.Format("{0:N}", CarWashInvoice.FragranceCost);
             this.lblPackagePrice.Text = string.Format("{0:C}", CarWashInvoice.PackageCost);
-            this.lblProvincialSalesTax.Text = string.Format("{0:N}", CarWashInvoice.ProvincialSalesTaxCharged);
-            this.lblGoodsAndServicesTax.Text = string.Format("{0:N}", CarWashInvoice.GoodsAndServicesTaxCharged);
             this.Text = "Car Wash Invoice";
-        }
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // CarWashInvoiceForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(619, 393);
-            this.Name = "CarWashInvoiceForm";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
         }
     }
 }
