@@ -3,7 +3,7 @@
  * Program: Business Information Technology
  * Course: ADEV-2008 (234110) Programming 2
  * Created: 08/03/2023
- * Updated: 03/04/2023
+ * Updated: 07/04/2023
  */
 
 using System;
@@ -29,8 +29,10 @@ namespace Chatelain.Ian.RRCAGApp
     {
         BindingSource packageSource;
         BindingSource fragranceSource;
+        BindingSource labelSource;
         BindingList<Package> packageBinding;
         BindingList<CarWashItem> fragranceBinding;
+        BindingList<CarWashInvoice> labelBinding;
         CarWashInvoiceForm carWashInvoiceForm;
         CarWashInvoice carWashInvoice;
 
@@ -41,16 +43,15 @@ namespace Chatelain.Ian.RRCAGApp
         {
             this.packageSource = new BindingSource();
             this.fragranceSource = new BindingSource();
+            this.labelSource = new BindingSource();
             this.packageBinding = new BindingList<Package>();
             this.fragranceBinding = new BindingList<CarWashItem>();
+            this.labelBinding = new BindingList<CarWashInvoice>();
+
 
             CreateCarWashItems();
             CreatePackages();
-
-            this.packageSource.DataSource = this.packageBinding;
-            this.cboPackage.DataSource = this.packageSource;
-            this.fragranceSource.DataSource = this.fragranceBinding;
-            this.cboFragrance.DataSource = this.fragranceSource;
+            BindData();
 
             this.Load += CarWashForm_Load;
             this.mnuToolsGenerateInvoice.Click += MnuToolsGenerateInvoice_Click;
@@ -83,7 +84,6 @@ namespace Chatelain.Ian.RRCAGApp
         /// </summary>
         private void CarWashInvoiceForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ClearLabels();
             InitialState();
         }
 
@@ -108,14 +108,11 @@ namespace Chatelain.Ian.RRCAGApp
 
                 currentServices.Insert(0, string.Format("Fragrance - {0}", currentFragrance));
 
-                ClearLabels();
-
                 this.lstInterior.DataSource = currentServices;
                 this.lstExterior.DataSource = ((Package)this.cboPackage.SelectedItem).ExteriorServices;
-                this.lblGoodsAndServicesTax.DataBindings.Add("Text", carWashInvoice, "GoodsAndServicesTaxCharged");
-                this.lblProvincialSalesTax.DataBindings.Add("Text", carWashInvoice, "ProvincialSalesTaxCharged");
-                this.lblSubtotal.DataBindings.Add("Text", carWashInvoice, "SubTotal", true, DataSourceUpdateMode.Never, null, "C");
-                this.lblTotal.DataBindings.Add("Text", carWashInvoice, "Total", true, DataSourceUpdateMode.Never, null, "C");
+
+                this.labelBinding.Clear();
+                this.labelBinding.Add(carWashInvoice);
 
                 this.mnuToolsGenerateInvoice.Enabled = true;
             }
@@ -141,6 +138,24 @@ namespace Chatelain.Ian.RRCAGApp
             this.lstExterior.DataSource = null;
             this.lstInterior.SelectionMode = SelectionMode.One;
             this.lstExterior.SelectionMode = SelectionMode.One;
+
+            // Binding Lists
+            this.labelBinding.Clear();
+        }
+
+        private void BindData()
+        {
+            this.packageSource.DataSource = this.packageBinding;
+            this.cboPackage.DataSource = this.packageSource;
+            this.fragranceSource.DataSource = this.fragranceBinding;
+            this.cboFragrance.DataSource = this.fragranceSource;
+            this.labelSource.DataSource = this.labelBinding;
+
+            // Labels
+            this.lblGoodsAndServicesTax.DataBindings.Add("Text", labelSource, "GoodsAndServicesTaxCharged");
+            this.lblProvincialSalesTax.DataBindings.Add("Text", labelSource, "ProvincialSalesTaxCharged");
+            this.lblSubtotal.DataBindings.Add("Text", labelSource, "SubTotal", true, DataSourceUpdateMode.Never, null, "C");
+            this.lblTotal.DataBindings.Add("Text", labelSource, "Total", true, DataSourceUpdateMode.Never, null, "C");
         }
 
         /// <summary>
@@ -149,13 +164,9 @@ namespace Chatelain.Ian.RRCAGApp
         private void ClearLabels()
         {
             this.lblGoodsAndServicesTax.DataBindings.Clear();
-            this.lblGoodsAndServicesTax.Text = string.Empty;
             this.lblProvincialSalesTax.DataBindings.Clear();
-            this.lblProvincialSalesTax.Text = string.Empty;
             this.lblSubtotal.DataBindings.Clear();
-            this.lblSubtotal.Text = string.Empty;
             this.lblTotal.DataBindings.Clear();
-            this.lblTotal.Text = string.Empty;
         }
 
         /// <summary>
@@ -163,7 +174,6 @@ namespace Chatelain.Ian.RRCAGApp
         /// </summary>
         private void CreatePackages()
         {
-            // TODO: make a csv of these and read them into the list like fragrances.
             // Interior
             List<string> standardInterior = new List<string>();
 
@@ -222,7 +232,7 @@ namespace Chatelain.Ian.RRCAGApp
             packageBinding.Add(executivePackage);
             packageBinding.Add(luxuryPackage);
         }
-        
+
         /// <summary>
         /// Reads a CSV file and outputs CarWashItems to a binding list in alphabetical order.
         /// </summary>
