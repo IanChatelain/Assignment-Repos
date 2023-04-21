@@ -9,6 +9,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -35,6 +36,30 @@ namespace Chatelain.Ian.RRCAGApp
         private BindingList<CarWashInvoice> labelBinding;
         private CarWashInvoiceForm carWashInvoiceForm;
         private CarWashInvoice carWashInvoice;
+        private List<string> description = new List<string>()
+                {
+                    "Standard",
+                    "Deluxe",
+                    "Executive",
+                    "Luxury"
+                };
+        private List<string> interior = new List<string>()
+                {
+                    "Shampoo Carpets",
+                    "Shampoo Upholstery",
+                    "Interior Protection Coat",
+                };
+        private List<string> exterior = new List<string>()
+                {
+                    "Hand Wash",
+                    "Hand Wax",
+                    "Wheel Polish",
+                    "Detail Engine Compartment"
+                };
+        private List<decimal> price = new List<decimal>()
+                {
+                    7.5M, 15M, 35M, 55M
+                };
 
         /// <summary>
         /// Initializes the CarWashForm.
@@ -48,9 +73,8 @@ namespace Chatelain.Ian.RRCAGApp
             this.fragranceBinding = new BindingList<CarWashItem>();
             this.labelBinding = new BindingList<CarWashInvoice>();
 
-
+            CreatePackages(this.description, this.price, this.interior, this.exterior);
             CreateCarWashItems();
-            CreatePackages();
             BindData();
 
             this.Load += CarWashForm_Load;
@@ -150,10 +174,10 @@ namespace Chatelain.Ian.RRCAGApp
             this.cboFragrance.SelectedIndex = this.cboFragrance.FindStringExact("Pine");
 
             // DataSources
-            this.lstInterior.DataSource = null;
-            this.lstExterior.DataSource = null;
-            this.lstInterior.SelectionMode = SelectionMode.One;
-            this.lstExterior.SelectionMode = SelectionMode.One;
+            this.lstInterior.DataSource = new List<object>();
+            this.lstExterior.DataSource = new List<object>();
+            this.lstInterior.SelectionMode = SelectionMode.None;
+            this.lstExterior.SelectionMode = SelectionMode.None;
 
             // Binding Lists
             this.labelBinding.Clear();
@@ -175,80 +199,31 @@ namespace Chatelain.Ian.RRCAGApp
         }
 
         /// <summary>
-        /// Clears the output label's DataBindings and Text.
+        /// Creates packages and adds them to the binding list.
         /// </summary>
-        private void ClearLabels()
+        private void CreatePackages(List<string> description, List<decimal> price, List<string> interior, List<string> exterior)
         {
-            this.lblGoodsAndServicesTax.DataBindings.Clear();
-            this.lblProvincialSalesTax.DataBindings.Clear();
-            this.lblSubtotal.DataBindings.Clear();
-            this.lblTotal.DataBindings.Clear();
+
+            List<string> tempInterior = new List<string>();
+            List<string> tempExterior = new List<string>();
+
+            for (int i = 0; i < description.Count; i++)
+            {
+                if (i > 0 && i <= interior.Count)
+                {
+                    tempInterior.Add(interior[i - 1]);
+                }
+
+                if (i < exterior.Count)
+                {
+                    tempExterior.Add(exterior[i]);
+                }
+
+                Package package = new Package(description[i], price[i], tempInterior, tempExterior);
+                packageBinding.Add(package);
+            }
         }
 
-        /// <summary>
-        /// Creates Packages and adds them to a BindingList.
-        /// </summary>
-        private void CreatePackages()
-        {
-            // Interior
-            List<string> standardInterior = new List<string>();
-
-            List<string> deluxeInterior = new List<string>()
-            {
-                "Shampoo Carpets"
-            };
-
-            List<string> executiveInterior = new List<string>()
-            {
-                "Shampoo Carpets",
-                "Shampoo Upholstery"
-            };
-
-            List<string> luxuryInterior = new List<string>()
-            {
-                "Shampoo Carpets",
-                "Shampoo Upholstery",
-                "Interior Protection Coat",
-            };
-
-            // Exterior
-            List<string> standardExterior = new List<string>()
-            {
-                "Hand Wash"
-            };
-
-            List<string> deluxeExterior = new List<string>()
-            {
-                "Hand Wash",
-                "Hand Wax"
-            };
-
-            List<string> executiveExterior = new List<string>()
-            {
-                "Hand Wash",
-                "Hand Wax",
-                "Wheel Polish"
-            };
-
-            List<string> luxuryExterior = new List<string>()
-            {
-                "Hand Wash",
-                "Hand Wax",
-                "Wheel Polish",
-                "Detail Engine Compartment"
-            };
-
-            Package standardPackage = new Package("Standard", 7.5M, standardInterior, standardExterior);
-            Package deluxePackage = new Package("Deluxe", 15M, deluxeInterior, deluxeExterior);
-            Package executivePackage = new Package("Executive", 35M, executiveInterior, executiveExterior);
-            Package luxuryPackage = new Package("Luxury", 55M, luxuryInterior, luxuryExterior);
-
-            packageBinding.Add(standardPackage);
-            packageBinding.Add(deluxePackage);
-            packageBinding.Add(executivePackage);
-            packageBinding.Add(luxuryPackage);
-        }
-        
         /// <summary>
         /// Reads a CSV file and outputs CarWashItems to a binding list in alphabetical order.
         /// </summary>
