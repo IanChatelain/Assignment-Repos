@@ -69,7 +69,10 @@ namespace Chatelain.Ian.RRCAGApp
             {
                 VehicleDataForm vehiclesForm = new VehicleDataForm();
                 vehiclesForm.MdiParent = this;
-                vehiclesForm.Show();
+                if (!vehiclesForm.IsDisposed)
+                {
+                    vehiclesForm.Show();
+                }
             }
         }
 

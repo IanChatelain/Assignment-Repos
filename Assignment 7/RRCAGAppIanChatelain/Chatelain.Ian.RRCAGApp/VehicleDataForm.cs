@@ -235,6 +235,7 @@ namespace Chatelain.Ian.RRCAGApp
             catch (Exception)
             {
                 MessageBox.Show("Unable to load vehicle data", "Data Load Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
 
@@ -243,10 +244,13 @@ namespace Chatelain.Ian.RRCAGApp
         /// </summary>
         private void DataBind()
         {
-            this.bindingSource.DataSource = this.dataSet.Tables["VehicleStock"];
-            this.dgvVehicles.DataSource = this.bindingSource;
-            this.dgvVehicles.Columns["ID"].Visible = false;
-            this.dgvVehicles.Columns["SoldBy"].Visible = false;
+            if (!(this.dataSet == null))
+            {
+                this.bindingSource.DataSource = this.dataSet.Tables["VehicleStock"];
+                this.dgvVehicles.DataSource = this.bindingSource;
+                this.dgvVehicles.Columns["ID"].Visible = false;
+                this.dgvVehicles.Columns["SoldBy"].Visible = false;
+            }
         }
 
         /// <summary>
